@@ -36,7 +36,7 @@ export const BRANDING = {
       id: "burgers",
       name: "Burgers",
       subtitle: "Crispy Patties & Toasted Brioche",
-      image: "/assets/featured-burger.jpg",
+      image: "/assets/products/burger.jpg",
       items: [
         "Aloo Tikki Burger",
         "Paneer Burger",
@@ -50,7 +50,7 @@ export const BRANDING = {
       id: "chowmein",
       name: "Chowmein",
       subtitle: "Wok-Tossed Street Noodles",
-      image: "/assets/featured-chowmein.jpg",
+      image: "/assets/products/veg-chowmein.jpg",
       items: [
         "Veg. Chowmein",
         "Paneer Chowmein",
@@ -64,7 +64,7 @@ export const BRANDING = {
       id: "momos",
       name: "Momos",
       subtitle: "Steamed & Crunchy Delights",
-      image: "/assets/categories/momos.jpg",
+      image: "/assets/products/veg-momos.jpg",
       items: [
         "Veg. Momos",
         "Veg Fried Momos",
@@ -80,7 +80,7 @@ export const BRANDING = {
       id: "chilli",
       name: "Chilli Specials",
       subtitle: "Sizzling Indo-Chinese Starters",
-      image: "/assets/categories/paneer-chilli.jpg",
+      image: "/assets/products/paneer-chilli.jpg",
       items: [
         "Paneer Chilli",
         "Veg Manchurian",
@@ -95,7 +95,7 @@ export const BRANDING = {
       id: "rice",
       name: "Rice Bowls",
       subtitle: "Aromatic Fried Rice Varieties",
-      image: "/assets/categories/fried-rice.jpg",
+      image: "/assets/products/veg-fried-rice.jpg",
       items: [
         "Veg Fried Rice",
         "Paneer Rice",
@@ -108,7 +108,7 @@ export const BRANDING = {
       id: "rolls",
       name: "Rolls",
       subtitle: "Warm Flaky Kathi Rolls",
-      image: "/assets/categories/spring-roll.jpg",
+      image: "/assets/products/spring-roll.jpg",
       items: [
         "Veg. Roll",
         "Paneer Roll",

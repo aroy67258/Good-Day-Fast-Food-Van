@@ -1,59 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { CartProvider } from './context/CartContext';
 import { OrderProvider } from './context/OrderContext';
 import { Header } from './components/ui/Header';
 import { HeroSection } from './components/sections/HeroSection';
-import { BrandIntro } from './components/sections/BrandIntro';
-import { FeaturedFood } from './components/sections/FeaturedFood';
 import { MenuSection } from './components/sections/MenuSection';
 import { BrandStory } from './components/sections/BrandStory';
-import { ContactFooter } from './components/sections/ContactFooter';
+import { Footer } from './components/sections/ContactFooter';
+import { BrandIntro } from './components/sections/BrandIntro';
 import { CartDrawer } from './components/ui/CartDrawer';
 
 export const AppContent: React.FC = () => {
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  // Track window scroll progress for smooth 3D hero parallax
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const heroHeight = window.innerHeight;
-      const progress = Math.min(Math.max(scrollY / heroHeight, 0), 1.5);
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-[#141210] text-stone-100 flex flex-col relative selection:bg-[#F5A623] selection:text-white antialiased overflow-x-hidden">
-      {/* Sticky Editorial Header with functional Cart Indicator */}
-      <Header />
+    <div className="min-h-screen text-stone-100 flex flex-col relative selection:bg-[#F5A623] selection:text-white antialiased overflow-x-hidden">
+      {/* 
+        ==================================================
+        FIXED GOOD DAY FOOD VAN BACKGROUND
+        - Stays fixed while website content scrolls over it
+        - Full viewport (100vw, 100vh / 100dvh)
+        - Subtle dark & warm overlay for contrast & readability
+        ==================================================
+      */}
+      <div className="fixed-van-background-layer" aria-hidden="true">
+        <img
+          src="/assets/good-day-van-background.jpg"
+          alt="Good Day Fast Food Van"
+          className="fixed-van-image"
+          loading="eager"
+          decoding="async"
+        />
+        {/* Subtle, light global overlay (10-15% opacity) keeping the Good Day van, warm lights, and counter bright and realistic */}
+        <div className="absolute inset-0 bg-black/12 pointer-events-none" />
+      </div>
 
-      {/* Main Continuous Scrolling Website */}
-      <main className="w-full">
-        {/* Section 1: 3D Food Van Hero */}
-        <HeroSection scrollProgress={scrollProgress} />
+      {/* Foreground Content Layer */}
+      <div className="relative z-10 flex flex-col flex-1">
+        {/* Sticky Editorial Header */}
+        <Header />
 
-        {/* Section 2: Brand Introduction & 4 Pillars */}
-        <BrandIntro />
+        {/* Main Continuous Scrolling Website */}
+        <main className="w-full">
+          {/* Section 1: Hero Visual with Real Van & Editorial Typography */}
+          <HeroSection />
 
-        {/* Section 3: Featured Food Showcase */}
-        <FeaturedFood />
+          {/* Section 2: Real Food Menu & Product Showcase with Add to Cart */}
+          <MenuSection />
 
-        {/* Section 4: Real Food Menu & Product Showcase with Add to Cart */}
-        <MenuSection />
+          {/* Section 3: Brand Story & Official Menu Poster */}
+          <BrandStory />
 
-        {/* Section 5: Brand Story & Official Menu Poster */}
-        <BrandStory />
-      </main>
+          {/* Section 4: The Four Feature Cards (Fresh Ingredients, Hygienic Preparation, Pocket Friendly, Made with Love) */}
+          <BrandIntro />
+        </main>
 
-      {/* Section 6: Contact & Minimal Luxury Footer */}
-      <ContactFooter />
+        {/* Section 5: Luxury Minimal Footer with Integrated Contact Section */}
+        <Footer />
 
-      {/* Phase 3 & 4 Shopping Cart & Order Flow Drawer */}
-      <CartDrawer />
+        {/* Shopping Cart & Order Flow Drawer */}
+        <CartDrawer />
+      </div>
     </div>
   );
 };

@@ -45,7 +45,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "Burgers",
     slug: "burgers",
     tagline: "Crispy Golden Patties & Warm Toasted Buns",
-    heroImage: "/assets/featured-burger.jpg",
+    heroImage: "/assets/products/burger.jpg",
     description: "Handcrafted Indian vegetarian burgers seared fresh to order with crunchy lettuce, ripe tomatoes, secret herb mayo, and seasoned patties.",
     hasDualPricing: false,
     option1Label: "",
@@ -60,7 +60,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 30,
         formattedPrice: "₹30",
-        image: "/assets/categories/burger.jpg",
+        image: "/assets/products/burger.jpg",
         badge: "Classic Street Style"
       },
       {
@@ -72,7 +72,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 50,
         formattedPrice: "₹50",
-        image: "/assets/categories/burger.jpg",
+        image: "/assets/products/paneer-burger.jpg",
         badge: "Campus Favorite"
       },
       {
@@ -84,7 +84,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 60,
         formattedPrice: "₹60",
-        image: "/assets/categories/burger.jpg"
+        image: "/assets/products/cheese-burger.jpg"
       },
       {
         id: "burger-kurkure",
@@ -95,7 +95,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 70,
         formattedPrice: "₹70",
-        image: "/assets/categories/burger.jpg",
+        image: "/assets/products/kurkure-burger.jpg",
         badge: "Extra Crunchy"
       },
       {
@@ -107,7 +107,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 75,
         formattedPrice: "₹75",
-        image: "/assets/featured-burger.jpg",
+        image: "/assets/products/paneer-cheese-burger.jpg",
         badge: "Chef Signature"
       }
     ]
@@ -121,7 +121,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "Chowmein",
     slug: "chowmein",
     tagline: "High-Flame Iron Wok Tossed Street Noodles",
-    heroImage: "/assets/featured-chowmein.jpg",
+    heroImage: "/assets/products/veg-chowmein.jpg",
     description: "Sizzling wok-tossed street noodles infused with smoky aromas, fresh shredded cabbage, bell peppers, carrots, spring onions, and savory sauces.",
     hasDualPricing: true,
     option1Label: DEFAULT_OPTION_1_LABEL,
@@ -134,7 +134,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chowmein",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/noodles.jpg",
+        image: "/assets/products/veg-chowmein.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 40, formatted: "₹40" },
           { label: DEFAULT_OPTION_2_LABEL, price: 80, formatted: "₹80" }
@@ -148,7 +148,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chowmein",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/noodles.jpg",
+        image: "/assets/products/paneer-chowmein.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -161,7 +161,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chowmein",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/featured-chowmein.jpg",
+        image: "/assets/products/hakka-noodles.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -175,7 +175,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chowmein",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/noodles.jpg",
+        image: "/assets/products/manchurian-noodles.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -188,7 +188,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chowmein",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/noodles.jpg",
+        image: "/assets/products/chilli-garlic-noodles.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -206,7 +206,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "Momos",
     slug: "momos",
     tagline: "Handcrafted Steamed, Fried & Kurkure Dumplings",
-    heroImage: "/assets/categories/momos.jpg",
+    heroImage: "/assets/products/veg-momos.jpg",
     description: "Tender handmade dumplings filled with fresh seasoned vegetables and rich paneer, served with fiery red chili garlic sauce and creamy dip.",
     hasDualPricing: true,
     option1Label: DEFAULT_OPTION_1_LABEL,
@@ -219,7 +219,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/veg-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 30, formatted: "₹30" },
           { label: DEFAULT_OPTION_2_LABEL, price: 60, formatted: "₹60" }
@@ -233,7 +233,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/veg-fried-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 35, formatted: "₹35" },
           { label: DEFAULT_OPTION_2_LABEL, price: 70, formatted: "₹70" }
@@ -247,7 +247,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/veg-kurkure-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
           { label: DEFAULT_OPTION_2_LABEL, price: 100, formatted: "₹100" }
@@ -261,7 +261,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/veg-gravy-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
           { label: DEFAULT_OPTION_2_LABEL, price: 100, formatted: "₹100" }
@@ -274,7 +274,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/paneer-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
           { label: DEFAULT_OPTION_2_LABEL, price: 100, formatted: "₹100" }
@@ -288,7 +288,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/paneer-fried-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -301,7 +301,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Momos",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/momos.jpg",
+        image: "/assets/products/paneer-kurkure-momos.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 70, formatted: "₹70" },
           { label: DEFAULT_OPTION_2_LABEL, price: 140, formatted: "₹140" }
@@ -319,7 +319,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "Chilli Specials",
     slug: "chilli-specials",
     tagline: "Sizzling Starters with Tangy Indo-Chinese Glaze",
-    heroImage: "/assets/categories/paneer-chilli.jpg",
+    heroImage: "/assets/products/paneer-chilli.jpg",
     description: "Crisp fried paneer cubes, vegetable manchurian balls, and crispy potatoes tossed in a glossy soy-chili reduction with bell peppers and green onions.",
     hasDualPricing: true,
     option1Label: DEFAULT_OPTION_1_LABEL,
@@ -332,7 +332,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chilli Specials",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/paneer-chilli.jpg",
+        image: "/assets/products/paneer-chilli.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 90, formatted: "₹90" },
           { label: DEFAULT_OPTION_2_LABEL, price: 170, formatted: "₹170" }
@@ -346,7 +346,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chilli Specials",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/paneer-chilli.jpg",
+        image: "/assets/products/veg-manchurian.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
           { label: DEFAULT_OPTION_2_LABEL, price: 100, formatted: "₹100" }
@@ -359,7 +359,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chilli Specials",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/paneer-chilli.jpg",
+        image: "/assets/products/chilli-potato.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -373,7 +373,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chilli Specials",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/paneer-chilli.jpg",
+        image: "/assets/products/honey-chilli-potato.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -387,7 +387,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chilli Specials",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/paneer-chilli.jpg",
+        image: "/assets/products/french-fries.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 40, formatted: "₹40" },
           { label: DEFAULT_OPTION_2_LABEL, price: 80, formatted: "₹80" }
@@ -400,7 +400,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Chilli Specials",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/paneer-chilli.jpg",
+        image: "/assets/products/mushroom-chilli.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 90, formatted: "₹90" },
           { label: DEFAULT_OPTION_2_LABEL, price: 170, formatted: "₹170" }
@@ -418,7 +418,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "Rice",
     slug: "rice",
     tagline: "Fragrant Fried Basmati Rice with Garden Veggies",
-    heroImage: "/assets/categories/fried-rice.jpg",
+    heroImage: "/assets/products/veg-fried-rice.jpg",
     description: "Aromatic long-grain basmati rice flash-fried in high heat with finely chopped seasonal vegetables, paneer cubes, and authentic street aromatics.",
     hasDualPricing: true,
     option1Label: DEFAULT_OPTION_1_LABEL,
@@ -431,7 +431,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Rice",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/fried-rice.jpg",
+        image: "/assets/products/veg-fried-rice.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
           { label: DEFAULT_OPTION_2_LABEL, price: 100, formatted: "₹100" }
@@ -445,7 +445,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Rice",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/fried-rice.jpg",
+        image: "/assets/products/paneer-fried-rice.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -458,7 +458,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Rice",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/fried-rice.jpg",
+        image: "/assets/products/manchurian-fried-rice.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -471,7 +471,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         categoryName: "Rice",
         isVegetarian: true,
         isAvailable: true,
-        image: "/assets/categories/fried-rice.jpg",
+        image: "/assets/products/mushroom-fried-rice.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 60, formatted: "₹60" },
           { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
@@ -488,7 +488,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
     name: "Rolls",
     slug: "rolls",
     tagline: "Flaky Parathas Wrapped with Savory Spiced Fillings",
-    heroImage: "/assets/categories/spring-roll.jpg",
+    heroImage: "/assets/products/spring-roll.jpg",
     description: "Crisp golden wraps and flaky parathas rolled tight with spiced paneer, garden cabbage, onions, peppers, and our signature street chutneys.",
     hasDualPricing: false,
     option1Label: "",
@@ -503,7 +503,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 40,
         formattedPrice: "₹40",
-        image: "/assets/categories/spring-roll.jpg"
+        image: "/assets/products/veg-roll.jpg"
       },
       {
         id: "roll-paneer",
@@ -514,7 +514,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 50,
         formattedPrice: "₹50",
-        image: "/assets/categories/spring-roll.jpg",
+        image: "/assets/products/paneer-roll.jpg",
         badge: "Hostel Favorite"
       },
       {
@@ -526,7 +526,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 30,
         formattedPrice: "₹30",
-        image: "/assets/categories/spring-roll.jpg",
+        image: "/assets/products/spring-roll.jpg",
         badge: "Crispy Delight"
       },
       {
@@ -538,7 +538,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 50,
         formattedPrice: "₹50",
-        image: "/assets/categories/spring-roll.jpg",
+        image: "/assets/products/kurkure-spring-roll.jpg",
         badge: "Extra Crunchy"
       },
       {
@@ -550,7 +550,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 70,
         formattedPrice: "₹70",
-        image: "/assets/categories/spring-roll.jpg",
+        image: "/assets/products/paneer-cheese-roll.jpg",
         badge: "Chef Special"
       },
       {
@@ -562,7 +562,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         isAvailable: true,
         price: 70,
         formattedPrice: "₹70",
-        image: "/assets/categories/spring-roll.jpg"
+        image: "/assets/products/mushroom-roll.jpg"
       }
     ]
   }

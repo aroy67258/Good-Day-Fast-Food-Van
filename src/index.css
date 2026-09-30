@@ -10,24 +10,104 @@
   --brand-cream: #FFFDF8;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: 100vw;
   font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background-color: #121110;
   color: #F8F7F5;
   overflow-x: hidden;
   user-select: none;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure mobile form inputs don't cause iOS Safari zoom */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Fixed Food Van Background Layer */
+.fixed-van-background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.fixed-van-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  user-select: none;
+  -webkit-user-drag: none;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Mobile & Tablet optimized focal centering to keep the van and food counter prominent */
+@media (max-width: 1024px) {
+  .fixed-van-image {
+    object-position: 58% center;
+  }
+}
+
+@media (max-width: 640px) {
+  .fixed-van-image {
+    object-position: 55% center;
+  }
 }
 
 h1, h2, h3, h4, .font-heading {
   font-family: 'Outfit', sans-serif;
 }
 
-/* Custom scrollbar */
+/* Safe area padding utilities */
+.pb-safe {
+  padding-bottom: max(16px, env(safe-area-inset-bottom, 16px));
+}
+
+.pt-safe {
+  padding-top: max(12px, env(safe-area-inset-top, 12px));
+}
+
+/* Hide scrollbar for category tabs while allowing smooth touch scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom desktop scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #181614;
@@ -38,14 +118,6 @@ h1, h2, h3, h4, .font-heading {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #F5A623;
-}
-
-/* Smooth Canvas container */
-.canvas-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  touch-action: none;
 }
 
 /* Subtle pulse animation for interactive indicators */

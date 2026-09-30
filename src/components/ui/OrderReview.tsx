@@ -130,22 +130,22 @@ export const OrderReview: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 flex flex-col justify-between overflow-y-auto">
-      <div className="p-6 space-y-6">
+    <div className="flex-1 flex flex-col justify-between overflow-hidden">
+      <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
         {/* Step Indicator & Back */}
         <div className="flex items-center justify-between pb-3 border-b border-stone-800/80">
           <div>
             <span className="text-[10px] font-bold uppercase tracking-wider text-[#F5A623]">
               Step 3 of 3
             </span>
-            <h4 className="text-lg font-bold text-white font-display">
+            <h4 className="text-base sm:text-lg font-bold text-white font-display">
               Review Your Order
             </h4>
           </div>
           <button
             type="button"
             onClick={() => setStep('details')}
-            className="inline-flex items-center gap-1 text-xs font-semibold text-stone-400 hover:text-white transition-colors"
+            className="min-h-[44px] inline-flex items-center gap-1 text-xs font-semibold text-stone-400 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Edit Details</span>
@@ -161,26 +161,26 @@ export const OrderReview: React.FC = () => {
         )}
 
         {/* Customer & Delivery Card */}
-        <div className="bg-[#201D1B] border border-stone-800/90 rounded-2xl p-4 space-y-3.5 shadow-sm">
+        <div className="bg-[#201D1B] border border-stone-800/90 rounded-2xl p-3.5 space-y-3 shadow-sm">
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold uppercase tracking-wider text-stone-300">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-stone-300">
               Recipient &amp; Delivery
             </span>
             <span
-              className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[11px] font-bold ${badge.color}`}
+              className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] sm:text-[11px] font-bold ${badge.color}`}
             >
               <MethodIcon className="w-3 h-3" />
               <span>{badge.label}</span>
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs">
             <div className="flex items-center gap-2 text-stone-300">
-              <User className="w-3.5 h-3.5 text-[#F5A623]" />
+              <User className="w-3.5 h-3.5 text-[#F5A623] flex-shrink-0" />
               <span className="font-semibold text-white truncate">{customer.fullName}</span>
             </div>
             <div className="flex items-center gap-2 text-stone-300">
-              <Phone className="w-3.5 h-3.5 text-[#4ADE80]" />
+              <Phone className="w-3.5 h-3.5 text-[#4ADE80] flex-shrink-0" />
               <span className="font-mono tracking-wide">+91 {normalizedPhone}</span>
             </div>
           </div>
@@ -189,7 +189,7 @@ export const OrderReview: React.FC = () => {
           <div className="pt-2 border-t border-stone-800/70 text-xs space-y-1">
             {fulfillment.method === 'hostel' && (
               <div>
-                <span className="text-stone-400 font-medium">Delivery Destination: </span>
+                <span className="text-stone-400 font-medium">Destination: </span>
                 <span className="text-stone-200 font-semibold">
                   {fulfillment.hostelName}, {fulfillment.roomBlock}
                 </span>
@@ -203,7 +203,7 @@ export const OrderReview: React.FC = () => {
 
             {fulfillment.method === 'nearby' && (
               <div>
-                <span className="text-stone-400 font-medium">Delivery Address: </span>
+                <span className="text-stone-400 font-medium">Address: </span>
                 <span className="text-stone-200 font-semibold">
                   {fulfillment.deliveryAddress}
                 </span>
@@ -236,25 +236,25 @@ export const OrderReview: React.FC = () => {
         </div>
 
         {/* Itemized Order List */}
-        <div className="space-y-2.5">
-          <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-stone-400">
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider text-stone-400">
             <span>Ordered Items ({items.length})</span>
             <span>Subtotal</span>
           </div>
 
-          <div className="space-y-2">
+          <div className="space-y-1.5">
             {items.map((item) => {
               const itemTotal = item.price * item.quantity;
               return (
                 <div
                   key={item.id}
-                  className="bg-[#201D1B] border border-stone-800/80 rounded-xl p-3 flex items-center justify-between text-xs"
+                  className="bg-[#201D1B] border border-stone-800/80 rounded-xl p-2.5 flex items-center justify-between text-xs"
                 >
-                  <div className="flex items-center gap-3 min-w-0 pr-2">
+                  <div className="flex items-center gap-2.5 min-w-0 pr-2">
                     <img
                       src={item.image}
                       alt={item.productName}
-                      className="w-10 h-10 rounded-lg object-cover bg-stone-900 border border-stone-800 flex-shrink-0"
+                      className="w-9 h-9 rounded-lg object-cover bg-stone-900 border border-stone-800 flex-shrink-0"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = '/assets/good-day-menu.jpg';
                       }}
@@ -280,7 +280,7 @@ export const OrderReview: React.FC = () => {
         </div>
 
         {/* Financial Calculation Breakdown */}
-        <div className="bg-[#201D1B] border border-stone-800/90 rounded-2xl p-4 space-y-2.5 text-xs">
+        <div className="bg-[#201D1B] border border-stone-800/90 rounded-2xl p-3.5 space-y-2 text-xs">
           <div className="flex items-center justify-between text-stone-300">
             <span>Food Subtotal</span>
             <span className="font-bold text-white text-sm">₹{subtotal}</span>
@@ -313,27 +313,27 @@ export const OrderReview: React.FC = () => {
         )}
       </div>
 
-      {/* Footer Actions: ORDER ON WHATSAPP & Copy Helper */}
-      <div className="p-6 border-t border-stone-800 bg-[#1C1917] space-y-3">
+      {/* Footer Actions: ORDER ON WHATSAPP (Min 52-56px height) & Copy Helper */}
+      <div className="p-4 sm:p-5 border-t border-stone-800 bg-[#1C1917] space-y-2.5 pb-safe flex-shrink-0">
         {/* Primary Action Button */}
         <button
           type="button"
           onClick={handleOrderOnWhatsApp}
           disabled={isOpeningWhatsApp || items.length === 0}
-          className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-[#15803D] via-[#16A34A] to-[#22C55E] hover:brightness-110 disabled:opacity-75 disabled:cursor-not-allowed text-white font-heading font-extrabold text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-warm transition-transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#4ADE80] focus:ring-offset-2 focus:ring-offset-[#1C1917] group"
+          className="w-full min-h-[52px] sm:min-h-[56px] py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#15803D] via-[#16A34A] to-[#22C55E] hover:brightness-110 disabled:opacity-75 disabled:cursor-not-allowed text-white font-heading font-black text-sm sm:text-base flex items-center justify-center gap-2.5 shadow-warm active:scale-95 transition-transform focus:outline-none focus:ring-2 focus:ring-[#4ADE80] group"
           aria-label="Order on WhatsApp"
         >
-          <MessageCircle className="w-5 h-5 text-white transition-transform duration-300 group-hover:scale-110" />
+          <MessageCircle className="w-5 h-5 text-white flex-shrink-0" />
           <span>{isOpeningWhatsApp ? 'Preparing WhatsApp...' : 'ORDER ON WHATSAPP'}</span>
-          <ExternalLink className="w-4 h-4 text-white/80" />
+          <ExternalLink className="w-4 h-4 text-white/80 flex-shrink-0" />
         </button>
 
         {/* Secondary Action: Copy Order Details Helper */}
-        <div className="flex items-center justify-between text-xs text-stone-400 pt-1">
+        <div className="flex items-center justify-between text-xs text-stone-400">
           <button
             type="button"
             onClick={handleCopyOrder}
-            className="inline-flex items-center gap-1.5 py-1 px-2.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#F5A623]"
+            className="min-h-[36px] inline-flex items-center gap-1.5 py-1.5 px-2.5 rounded-lg bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-300 hover:text-white transition-colors active:scale-95"
             title="Copy plain-text order message to clipboard"
           >
             {copiedToClipboard ? (
@@ -352,14 +352,14 @@ export const OrderReview: React.FC = () => {
           <button
             type="button"
             onClick={() => setStep('details')}
-            className="hover:text-white transition-colors py-1 px-2 rounded focus:outline-none focus:ring-1 focus:ring-stone-400"
+            className="min-h-[36px] hover:text-white transition-colors py-1.5 px-2 flex items-center"
           >
             ← Edit Details
           </button>
         </div>
 
         <p className="text-[10px] text-center text-stone-500 font-medium">
-          Order number: +{WHATSAPP_ORDER_NUMBER} • Message is sent only when you tap Send in WhatsApp.
+          Order phone: +{WHATSAPP_ORDER_NUMBER} • Message is sent only when you press Send in WhatsApp.
         </p>
       </div>
     </div>
