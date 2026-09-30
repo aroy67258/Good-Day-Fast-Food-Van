@@ -14,9 +14,9 @@ export const BrandIntro: React.FC = () => {
           </div>
 
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight font-display max-w-4xl leading-tight">
-            Crispy. Sizzling. <br />
+            Why Good Day Fast Food Van? <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F5A623] via-[#FBBF24] to-[#E11D48]">
-              Unapologetically Delicious.
+              Crispy. Sizzling. Unapologetically Delicious.
             </span>
           </h2>
 

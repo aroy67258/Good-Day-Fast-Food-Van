@@ -88,8 +88,8 @@ export const buildWhatsAppOrderMessage = ({
   items.forEach((item, index) => {
     const itemTotal = item.price * item.quantity;
     lines.push(`${index + 1}. ${item.productName}`);
-    if (item.selectedOption) {
-      lines.push(item.selectedOption);
+    if (item.selectedOption && !item.productName.includes(item.selectedOption)) {
+      lines.push(`Size: ${item.selectedOption}`);
     }
     lines.push(`Price: ₹${item.price}`);
     lines.push(`Quantity: ${item.quantity}`);

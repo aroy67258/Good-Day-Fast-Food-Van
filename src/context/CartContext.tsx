@@ -81,10 +81,11 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return updated;
       } else {
         // Add new line item
+        const displayName = optionLabel ? `${product.name} — ${optionLabel}` : product.name;
         const newItem: CartItem = {
           id: cartItemId,
           productId: product.id,
-          productName: product.name,
+          productName: displayName,
           categoryName: product.categoryName,
           image: product.image,
           selectedOption: optionLabel,

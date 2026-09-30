@@ -5,6 +5,7 @@ import { Header } from './components/ui/Header';
 import { HeroSection } from './components/sections/HeroSection';
 import { MenuSection } from './components/sections/MenuSection';
 import { BrandStory } from './components/sections/BrandStory';
+import { FAQSection } from './components/sections/FAQSection';
 import { Footer } from './components/sections/ContactFooter';
 import { BrandIntro } from './components/sections/BrandIntro';
 import { CartDrawer } from './components/ui/CartDrawer';
@@ -23,7 +24,7 @@ export const AppContent: React.FC = () => {
       <div className="fixed-van-background-layer" aria-hidden="true">
         <img
           src="/assets/good-day-van-background.jpg"
-          alt="Good Day Fast Food Van"
+          alt="Good Day Fast Food Van serving vegetarian street food"
           className="fixed-van-image"
           loading="eager"
           decoding="async"
@@ -48,7 +49,10 @@ export const AppContent: React.FC = () => {
           {/* Section 3: Brand Story & Official Menu Poster */}
           <BrandStory />
 
-          {/* Section 4: The Four Feature Cards (Fresh Ingredients, Hygienic Preparation, Pocket Friendly, Made with Love) */}
+          {/* Section 4: Frequently Asked Questions */}
+          <FAQSection />
+
+          {/* Section 5: The Four Feature Cards (Fresh Ingredients, Hygienic Preparation, Pocket Friendly, Made with Love) */}
           <BrandIntro />
         </main>
 

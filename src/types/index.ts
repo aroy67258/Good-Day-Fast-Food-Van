@@ -35,7 +35,7 @@ export interface CartItem {
   productName: string;
   categoryName: string;
   image: string;
-  selectedOption?: string; // e.g. "Option 1", "Option 2"
+  selectedOption?: string; // e.g. "Half", "Full"
   price: number;
   formattedPrice: string;
   quantity: number;

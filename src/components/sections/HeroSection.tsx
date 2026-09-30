@@ -34,15 +34,15 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             <span>100% Pure Vegetarian Street Food</span>
           </div>
 
-          {/* Main Brand Titles (Mobile responsive 34-44px heading) */}
-          <div className="space-y-0.5 sm:space-y-1">
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight font-display leading-[1.05] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+          {/* Main Brand Title — Single Primary SEO H1 */}
+          <h1 className="space-y-0.5 sm:space-y-1">
+            <span className="block text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tight font-display leading-[1.05] drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
               GOOD DAY
-            </h1>
-            <p className="text-2xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F5A623] via-[#FBBF24] to-[#F59E0B] tracking-wide font-display drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            </span>
+            <span className="block text-2xl sm:text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F5A623] via-[#FBBF24] to-[#F59E0B] tracking-wide font-display drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
               FAST FOOD VAN
-            </p>
-          </div>
+            </span>
+          </h1>
 
           {/* Subtitle & Tagline */}
           <p className="text-sm sm:text-base md:text-lg text-white font-medium max-w-xl leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]">

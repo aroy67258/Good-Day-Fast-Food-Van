@@ -276,9 +276,9 @@ export const MenuSection: React.FC = () => {
                 <div className="flex items-center justify-between mb-3 px-1">
                   <div className="flex items-center gap-2 sm:gap-2.5">
                     <span className="w-2.5 h-2.5 rounded-full bg-[#15803D]" />
-                    <h3 className="text-base sm:text-xl font-extrabold text-white font-display uppercase tracking-wide">
+                    <h2 className="text-base sm:text-xl font-extrabold text-white font-display uppercase tracking-wide">
                       {category.name}
-                    </h3>
+                    </h2>
                     <span className="text-[11px] font-semibold text-stone-400 bg-stone-900/90 border border-stone-800 px-2 py-0.5 rounded-full">
                       {items.length} {items.length === 1 ? 'item' : 'items'}
                     </span>

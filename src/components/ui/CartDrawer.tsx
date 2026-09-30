@@ -226,7 +226,7 @@ export const CartDrawer: React.FC = () => {
                             {item.productName}
                           </h4>
                           <div className="flex items-center gap-1.5 text-[11px] text-stone-400 mt-0.5">
-                            {item.selectedOption && (
+                            {item.selectedOption && !item.productName.includes(item.selectedOption) && (
                               <span className="text-[#F5A623] font-semibold">
                                 {item.selectedOption} •
                               </span>

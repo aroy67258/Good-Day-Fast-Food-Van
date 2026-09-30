@@ -245,32 +245,19 @@ export const OrderDetailsForm: React.FC = () => {
                 )}
               </div>
 
-              {/* Room / Block / Floor */}
+              {/* Room / Block / Floor (Optional) */}
               <div className="space-y-1">
                 <label htmlFor="room-block" className="block text-xs font-medium text-stone-300">
-                  Room / Block / Floor <span className="text-[#EF4444]">*</span>
+                  Room / Block / Floor <span className="text-stone-500 font-normal">(Optional)</span>
                 </label>
                 <input
                   id="room-block"
                   type="text"
-                  required
-                  aria-required="true"
-                  aria-invalid={!!errors.roomBlock}
-                  aria-describedby={errors.roomBlock ? 'room-block-error' : undefined}
                   value={fulfillment.roomBlock}
                   onChange={(e) => updateFulfillment({ roomBlock: e.target.value })}
                   placeholder="e.g. Room 204, B-Block"
-                  className={`w-full min-h-[46px] px-3 py-2.5 rounded-xl bg-stone-950 border text-stone-100 placeholder-stone-600 text-base focus:outline-none focus:ring-1 ${
-                    errors.roomBlock
-                      ? 'border-[#EF4444] focus:ring-[#EF4444]'
-                      : 'border-stone-800 focus:border-[#F5A623]'
-                  }`}
+                  className="w-full min-h-[46px] px-3 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-[#F5A623] text-stone-100 placeholder-stone-600 text-base focus:outline-none focus:ring-1 focus:ring-[#F5A623]"
                 />
-                {errors.roomBlock && (
-                  <p id="room-block-error" className="text-[11px] font-medium text-[#EF4444] pt-0.5">
-                    {errors.roomBlock}
-                  </p>
-                )}
               </div>
 
               {/* Delivery Instructions (Optional) */}

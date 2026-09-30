@@ -127,9 +127,6 @@ export const OrderProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       if (!fulfillment.hostelName.trim()) {
         newErrors.hostelName = 'Please enter your hostel name';
       }
-      if (!fulfillment.roomBlock.trim()) {
-        newErrors.roomBlock = 'Please specify your room or block number';
-      }
     } else if (fulfillment.method === 'nearby') {
       if (!fulfillment.deliveryAddress.trim()) {
         newErrors.deliveryAddress = 'Please enter your delivery address / landmark';

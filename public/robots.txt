@@ -1,0 +1,8 @@
+# Robots.txt for Good Day Fast Food Van
+# Production URL: https://aroy67258.github.io/Good-Day-Fast-Food-Van/
+
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://aroy67258.github.io/Good-Day-Fast-Food-Van/sitemap.xml

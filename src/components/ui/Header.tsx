@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMenuDropdownOpen, setIsMenuDropdownOpen] = useState(false);
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<'hero' | 'menu' | 'story' | 'contact'>('hero');
+  const [activeSection, setActiveSection] = useState<'hero' | 'menu' | 'story' | 'faq' | 'contact'>('hero');
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dropdownButtonRef = useRef<HTMLButtonElement>(null);
@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sections: ('contact' | 'story' | 'menu' | 'hero')[] = ['contact', 'story', 'menu', 'hero'];
+      const sections: ('contact' | 'faq' | 'story' | 'menu' | 'hero')[] = ['contact', 'faq', 'story', 'menu', 'hero'];
       const scrollPos = window.scrollY + 160;
 
       for (const sectionId of sections) {
@@ -225,6 +225,18 @@ export const Header: React.FC = () => {
 
           <button
             type="button"
+            onClick={() => scrollToSection('faq')}
+            className={`min-h-[40px] px-3 py-1.5 rounded-xl text-sm font-semibold tracking-wide transition-all ${
+              activeSection === 'faq'
+                ? 'text-[#F5A623] bg-white/5'
+                : 'text-stone-300 hover:text-[#F5A623] hover:bg-white/5'
+            }`}
+          >
+            FAQ
+          </button>
+
+          <button
+            type="button"
             onClick={() => scrollToSection('contact')}
             className={`min-h-[40px] px-3 py-1.5 rounded-xl text-sm font-semibold tracking-wide transition-all ${
               activeSection === 'contact'
@@ -351,6 +363,18 @@ export const Header: React.FC = () => {
               }`}
             >
               <span>About Us</span>
+              <span className="text-stone-600 text-xs">→</span>
+            </button>
+
+            {/* FAQ link */}
+            <button
+              type="button"
+              onClick={() => scrollToSection('faq')}
+              className={`w-full text-left min-h-[46px] text-base font-semibold py-2.5 px-3 rounded-xl transition-colors flex items-center justify-between ${
+                activeSection === 'faq' ? 'text-[#F5A623] bg-stone-900' : 'text-stone-200 hover:text-[#F5A623] hover:bg-stone-900/60'
+              }`}
+            >
+              <span>FAQ</span>
               <span className="text-stone-600 text-xs">→</span>
             </button>
 

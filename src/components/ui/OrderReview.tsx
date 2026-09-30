@@ -191,7 +191,8 @@ export const OrderReview: React.FC = () => {
               <div>
                 <span className="text-stone-400 font-medium">Destination: </span>
                 <span className="text-stone-200 font-semibold">
-                  {fulfillment.hostelName}, {fulfillment.roomBlock}
+                  {fulfillment.hostelName}
+                  {fulfillment.roomBlock?.trim() ? `, ${fulfillment.roomBlock.trim()}` : ''}
                 </span>
                 {fulfillment.deliveryInstructions && (
                   <p className="text-stone-400 text-[11px] mt-0.5 italic">
@@ -264,7 +265,7 @@ export const OrderReview: React.FC = () => {
                         {item.productName}
                       </div>
                       <div className="text-[11px] text-stone-400">
-                        {item.selectedOption ? `${item.selectedOption} • ` : ''}
+                        {item.selectedOption && !item.productName.includes(item.selectedOption) ? `${item.selectedOption} • ` : ''}
                         {item.formattedPrice} × {item.quantity}
                       </div>
                     </div>

@@ -36,7 +36,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="relative h-[115px] sm:h-[125px] w-full overflow-hidden bg-stone-900 flex-shrink-0">
           <img
             src={product.image}
-            alt={product.name}
+            alt={`${product.name} from Good Day Fast Food Van - Fresh vegetarian street food`}
             loading="lazy"
             decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
@@ -75,18 +75,18 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Product Details (Compact, No long paragraphs) */}
         <div className="p-2.5 sm:p-3 space-y-1.5">
           {/* Product Name (Max 2 lines with controlled height) */}
-          <h4
+          <h3
             className="text-[13px] sm:text-sm font-bold text-white font-display line-clamp-2 leading-tight group-hover:text-[#F5A623] transition-colors h-[34px] flex items-center"
             title={product.name}
           >
             {product.name}
-          </h4>
+          </h3>
 
           {/* Price / Price Options Area */}
           <div className="pt-1 border-t border-stone-800/60">
             {product.priceOptions && product.priceOptions.length > 0 ? (
-              // Dual-price items: compact interactive selector
-              <div className="grid grid-cols-2 gap-1 my-0.5">
+              // Dual-price items: clearly readable selectable Half / Full buttons
+              <div className="grid grid-cols-2 gap-1.5 my-1" role="group" aria-label="Select portion size">
                 {product.priceOptions.map((opt, idx) => {
                   const isOptSelected = selectedOption?.label === opt.label;
                   return (
@@ -94,17 +94,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                       key={idx}
                       type="button"
                       onClick={() => setSelectedOption(opt)}
-                      className={`min-h-[32px] py-1 px-1 rounded-lg text-center border transition-all active:scale-95 ${
+                      className={`min-h-[36px] py-1 px-1.5 rounded-lg text-center border transition-all active:scale-95 cursor-pointer flex flex-col items-center justify-center ${
                         isOptSelected
-                          ? 'bg-[#9E1B1B]/40 border-[#F5A623] text-white shadow-sm ring-1 ring-[#F5A623]'
-                          : 'bg-stone-900/80 border-stone-800 text-stone-400 hover:text-stone-200'
+                          ? 'bg-[#C21807]/35 border-[#F5A623] text-white shadow-sm ring-1 ring-[#F5A623]'
+                          : 'bg-stone-900/90 border-stone-800 text-stone-300 hover:text-white hover:border-stone-700'
                       }`}
+                      aria-pressed={isOptSelected}
                       aria-label={`Select ${opt.label} for ${opt.formatted}`}
                     >
-                      <span className="block text-[8px] text-stone-400 truncate leading-none mb-0.5">
+                      <span
+                        className={`text-[10px] sm:text-[11px] font-bold tracking-wide uppercase leading-tight ${
+                          isOptSelected ? 'text-[#FDE047]' : 'text-stone-400'
+                        }`}
+                      >
                         {opt.label}
                       </span>
-                      <span className="text-[11px] sm:text-xs font-extrabold text-[#FBBF24] leading-none block">
+                      <span className="text-xs sm:text-[13px] font-black text-[#FBBF24] leading-tight mt-0.5">
                         {opt.formatted}
                       </span>
                     </button>
@@ -112,10 +117,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 })}
               </div>
             ) : (
-              // Single price item
-              <div className="flex items-center justify-between min-h-[32px] px-0.5">
-                <span className="text-[11px] text-stone-400 font-medium">Price</span>
-                <span className="text-base sm:text-lg font-extrabold text-[#FBBF24] font-display">
+              // Single price item: clean single-price display [ Price ₹30 ]
+              <div className="flex items-center justify-between min-h-[36px] px-2 my-1 bg-stone-900/40 rounded-lg border border-stone-800/60">
+                <span className="text-[11px] sm:text-xs text-stone-400 font-semibold tracking-wide uppercase">
+                  Price
+                </span>
+                <span className="text-base sm:text-lg font-black text-[#FBBF24] font-display">
                   {product.formattedPrice}
                 </span>
               </div>

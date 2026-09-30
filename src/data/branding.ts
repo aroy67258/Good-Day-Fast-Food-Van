@@ -6,8 +6,15 @@ export const BRANDING = {
   tagline: "100% VEGETARIAN • 100% DELICIOUS",
   slogan: "Good Food • Good Day • Good Life",
   phone: "8081551589",
+  phoneFormatted: "+91-8081551589",
   instagram: "ankush_jai_5312",
+  instagramUrl: "https://instagram.com/ankush_jai_5312",
+  address: "Near Madan Mohan Malaviya University of Technology (MMMUT), Gorakhpur, Uttar Pradesh – 273010, India",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Madan+Mohan+Malaviya+University+of+Technology%2C+Gorakhpur%2C+Uttar+Pradesh+273010",
   deliveryNote: "Delivery Available (Hostel)",
+  siteUrl: "https://aroy67258.github.io/Good-Day-Fast-Food-Van",
+  seoTitle: "Good Day Fast Food Van | Vegetarian Street Food & Hostel Delivery",
+  seoDescription: "Fresh vegetarian burgers, chowmein, momos, fried rice, rolls and street food from Good Day Fast Food Van near MMMUT Gorakhpur. Explore the menu and order for hostel or campus delivery.",
   posterSrc: "/assets/good-day-menu.jpg",
   pillars: [
     {

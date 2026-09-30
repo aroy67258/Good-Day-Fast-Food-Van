@@ -1,5 +1,5 @@
 export interface PriceOption {
-  label: string; // Neutral configurable label (e.g., 'Option 1', 'Option 2')
+  label: string; // "Half" | "Full"
   price: number;
   formatted: string;
 }
@@ -32,9 +32,9 @@ export interface MenuCategory {
   items: MenuItem[];
 }
 
-// Configurable neutral labels for dual-price items (easily editable when portion sizes are confirmed)
-export const DEFAULT_OPTION_1_LABEL = "Option 1";
-export const DEFAULT_OPTION_2_LABEL = "Option 2";
+// Configurable portion size labels for dual-price items (Half / Full)
+export const DEFAULT_OPTION_1_LABEL = "Half";
+export const DEFAULT_OPTION_2_LABEL = "Full";
 
 export const MENU_CATEGORIES: MenuCategory[] = [
   // -------------------------------------------------------------
@@ -362,7 +362,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
         image: "/assets/products/chilli-potato.jpg",
         priceOptions: [
           { label: DEFAULT_OPTION_1_LABEL, price: 50, formatted: "₹50" },
-          { label: DEFAULT_OPTION_2_LABEL, price: 120, formatted: "₹120" }
+          { label: DEFAULT_OPTION_2_LABEL, price: 100, formatted: "₹100" }
         ],
         badge: "Crispy"
       },
